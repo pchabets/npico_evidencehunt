@@ -21,7 +21,7 @@ sed -i '' 's|"P"|"Patient"|g' data/final_cleaned.jsonl
 sed -i '' 's|"I"|"Intervention"|g' data/final_cleaned.jsonl
 sed -i '' 's|"C"|"Control"|g' data/final_cleaned.jsonl
 sed -i '' 's|"X"|"Outcome"|g' data/final_cleaned.jsonl
-sed -i '' 's|"B"|"O"|g' data/final_cleaned.jsonl
+sed -i '' 's|"B"|"TOREMOVE"|g' data/final_cleaned.jsonl
 
 
 ######################
