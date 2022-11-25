@@ -123,7 +123,7 @@ tag_outside = 'O'
 transformer_name = 'microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract'
 
 # hyperparameters
-hyperparameters = { 'epochs' : 20,
+hyperparameters = { 'epochs' : 30,
                     'warmup_steps' : 400,
                     'train_batch_size': 16,
                     'learning_rate': 0.0001 }
@@ -155,10 +155,10 @@ model_outfile = outdir + '/trained_ner_model.bin'
 model.save_network( model_outfile )
 
 # evaluate on external testing data
-print( model.evaluate_performance( data_validation ) )
 print( model.evaluate_performance( data_testing ) )
 
+
 # predict example sentence
-#text = "A total of 110 patients with epilepsy entered the study on MRI-testing."
-#print( model.predict_text( text ) )
+text = "A total of 110 patients with epilepsy entered the study on MRI-testing."
+print( model.predict_text( text ) )
 
